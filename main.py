@@ -1,0 +1,16 @@
+from gi.repository import Gtk, WebKit
+...
+win = Gtk.Window()
+overlay = Gtk.Overlay()
+page = WebKit.WebView()
+page.load_uri("http://www.google.com")
+overlay.add(page)
+image = Gtk.Image()
+image.set_from_file("HappyFish.jpg")
+image.set_halign(Gtk.Align.START)
+image.set_valign(Gtk.Align.START)
+overlay.add_overlay(image)
+win.add(overlay)
+win.show_all()
+win.connect('destroy', Gtk.main_quit)
+Gtk.main()
