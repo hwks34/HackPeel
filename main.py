@@ -215,8 +215,6 @@ while not done:
                 window.mainloop()
 
 
-
-
         else:
          current_time = pygame.time.get_ticks()
          if current_time - last_update >= animation_cooldown:
